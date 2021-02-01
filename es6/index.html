@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // // ES6 methods
+        // const str = "To be, or not to be, that is the question.";
+
+        // console.log(str.startsWith("To be")); // true
+        // console.log(str.startsWith("not to be")); // false
+        // console.log(str.startsWith("not to be", 10)); // true
+
+
+
+
+        // const str2 = "To be, or not to be, that is the question.";
+
+        // console.log(str2.endsWith("question.")); // true
+        // console.log(str2.endsWith("to be")); // false
+        // console.log(str2.endsWith("to be", 19)); // true
+
+
+
+
+        // Object destructuring
+        const person = {
+            name: "Ironhacker",
+            age: 25,
+            favoriteMusic: "Metal",
+            address: {
+                street: 'whatever',
+                number: 22
+            },
+            job: {
+                title: 'teacher',
+                salary: 33333,
+                location: {
+                    street: 'whatever 2',
+                    code: 28002
+                }
+            }
+        }
+
+        // let name = person.name;
+        // let age = person.age;
+        // let favoriteMusic = person.favoriteMusic;
+
+        const { name, age, favoriteMusic, address } = person
+        const { title, salary } = person.job
+
+        console.log(`Hello, ${name}.`);
+        console.log(`You are ${age} years old.`);
+        console.log(`Your favorite music is ${favoriteMusic}.`);
+        console.log(`Your line in ${address.street} street.`);
+        console.log(`Your salary is ${salary}`)
+
+
+
+
+
+
+
+
+        // Array destructuring
+        const drinks = ['fanta', 'kas', 'agua', 'cacaolat', 'cocacola']
+        const [first, second, , fourth] = drinks
+
+        console.log('Las bebidas seleccionadas son', first, second, fourth)
+
+
+
+
+
+
+        // Spread operator
+        const reptiles = ["snake", "lizard", "alligator"];
+        const mammals = ["puppy", "kitten", "bunny"];
+        const animals = [...mammals, 'popino', ...reptiles, 'cobra'];
+
+
+
+
+
+        // REST parameters
+        function listAnimals(domador, ...animals) {
+
+            console.log('El domador es', domador)
+            animals.forEach(elm => console.log('un animal es:', elm))
+
+            console.log('Este es el objeto arguments:', arguments)
+        }
+
+
+        listAnimals('Germán', 'Mono', 'Cabra', 'Perezoso')
+
+
+
+    </script>
+
+</body>
+
+</html>
